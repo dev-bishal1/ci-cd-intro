@@ -3,6 +3,7 @@ const router = express.Router()
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  console.log('request coming in')
   res.render('index', { title: 'Nimble-ICE' })
 })
 
@@ -12,8 +13,8 @@ router.get('/ice-flakes', function (req, res, next) {
     .status(201)
     .json({
       resource: 'ice-flakes',
-      count: 1005,
-      shape: 'rectangle'
+      count: 205,
+      shape: 'circle'
     })
 })
 
